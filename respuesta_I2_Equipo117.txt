@@ -1,3 +1,32 @@
-Bengoa Marianela
-Torres Carmona Theo
-Vázquez Micaela
+ALFA: Bengoa Marianela
+BETA: Torres Carmona Theo
+GAMMA: Vázquez Micaela
+a-¿Como actualizo mi repositorio, al estado que esté el repo que hice FORK?
+Añadimos el repositorio remoto al local utilizando el comando git remote add "link del repositorio del fork" y luego hacemos un fetch de todas las ramas del repositorio original para traer todos los cambios nuevos.Finalmente, rebasamos nuestro trabajo para poder continuar la ultima version del repositorio original subiendo así los cambios.
+
+b-¿Puede ALFA actualizar su FORK al estado del fork de GAMMA?
+Si se puede, pero ALFA  debe poner como direccion de repositorio remoto el de GAMMA y volver a hacer todos los pasos de la actualización del punto A.
+
+Comandos
+Gamma: 
+-git clone https:https://github.com/The0Torres/TP_SO_i2_117.git
+-git status
+-git add -A
+-git commit -m "Interaccion 2 punto 2 GAMMA"
+-git push
+
+Gamma: 
+-git remote add upstream https:https://github.com/The0Torres/TP_SO_i2_117.git
+-git fetch upstream
+-git checkout main
+-git rebase upstream/main
+-git push -f
+
+Gamma: 
+-git fetch upstream
+-git checkout main
+-git rebase upstream/main
+-git status
+-git add -A
+-git commit -m "Interaccion 2 punto 5 GAMMA"
+-git push -f
